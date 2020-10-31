@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    margin: 14vh auto;
+    max-width: 1000px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+}
+
+.round {
+    flex-basis: 5vh;
+    line-height: 2vh;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+}
+
+.round span {
+    color: rgb(206, 28, 28);
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 0.5em;
+}
+
+.result {
+    flex-basis: 15vh;
+    width: 100%;
+    display: flex;
+}
+
+.result .scores {
+    width: calc(100%/3);
+    text-align: center;
+    line-height: 5vh;
+}
+
+.scores span {
+    font-size: 2.4em;
+}
+
+.game {
+    flex-basis: 40vh;
+    width: 100%;
+    display: flex;
+}
+
+.col {
+    width: calc(100%/3);
+    height: 100%;
+    text-align: center;
+}
+
+.border {
+    box-sizing: border-box;
+    border: 1px lightgray solid;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.border img {
+    width: 100%;
+    height: auto;
+}
+
+.right img {
+    transform: scaleX(-1) translateX(-100%);
+}
+
+.right img.active {
+    transform: scaleX(-1) translateX(0);
+    transition: .1s;
+}
+
+.left img {
+    transform: translateX(-100%);
+}
+
+.left img.active {
+    transform: translateX(0);
+    transition: .1s;
+}
+
+.border div {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-choice button,
+.rulls {
+    box-sizing: border-box;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 6vh;
+    height: 6vh;
+    border: none;
+    background-color: rgb(206, 28, 28);
+    border-radius: 50%;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.rulls {
+    width: 80%;
+    height: 6vh;
+    margin: 1vh auto;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.rulls:hover {
+    background-color: rgb(235, 35, 35);
+
+}
+
+.player-choice button:hover {
+    background-color: rgb(235, 35, 35);
+    transform-origin: center center;
+    transform: rotate(0);
+    animation: btn 2s infinite;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.middle {
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.middle section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    border-top: 1px solid lightgrey;
+    padding: 1vh 0;
+}
+
+.middle section span {
+    font-weight: bold;
+    color: rgb(206, 28, 28);
+}
+
+.middle section p {
+    text-transform: none;
+}
+
+.middle div p:first-child {
+    font-size: 1.4em;
+    margin-bottom: 1.5vh;
+}
+
+.bottom p:first-child {
+    margin-top: 3vh;
+}
+
+.middle section i {
+    font-size: 1.7em;
+}
+
+.bottom section {
+    justify-content: flex-start;
+}
+
+.bottom section span {
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.bottom section p {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.rulesBcg.active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: 1;
+}
+
+.rulesMenu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.rulesMenu.active {
+    display: block;
+    width: 600px;
+    height: 70vh;
+    z-index: 1;
+    text-align: center;
+    box-sizing: border-box;
+    border: 5px solid rgb(206, 28, 28);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.rulesMenu.active i {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2.5em;
+    transform: rotate(0deg);
+    transform-origin: (50%, 50%);
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.rulesMenu.active i:hover {
+    transform: rotate(90deg);
+    color: rgb(206, 28, 28);
+}
+
+.rulesMenu.active h2 {
+    margin: 22%;
+    margin-bottom: 15%;
+    font-size: 2em;
+}
+
+.rulesMenu.active p {
+    text-transform: none;
+    display: block;
+    margin: 4%;
+    font-size: 1.8em;
+}
+
+@keyframes btn {
+    0% {
+        transform: rotate(0);
+    }
+
+    3% {
+        transform: rotate(-7deg);
+    }
+
+    6% {
+        transform: rotate(0);
+    }
+
+    9% {
+        transform: rotate(7deg);
+    }
+
+    12% {
+        transform: rotate(0);
+    }
+}

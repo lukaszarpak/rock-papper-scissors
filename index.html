@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/921fcf519c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <p class="round">Round<span>1</span>ready?</p>
+        <div class="result">
+            <div class="scores wins">
+                <p>Player</p>
+                <span>0</span>
+            </div>
+            <div class="scores ties">
+                <p>Ties</p>
+                <span>0</span>
+            </div>
+            <div class="scores losses">
+                <p>Ai</p>
+                <span>0</span>
+            </div>
+        </div>
+        <div class="game">
+            <div class="left col border">
+                <img src="img/rock.jpg" alt="Player's choice">
+                <div class="player-choice">
+                    <button data-option="rock" title="Rock"><i class="far fa-hand-rock"></i></button>
+                    <button data-option="paper" title="Paper"><i class="far fa-hand-paper"></i></button>
+                    <button data-option="scissors" title="Scissors"><i
+                            class="far fa-hand-scissors fa-rotate-90"></i></button>
+                </div>
+            </div>
+            <div class="middle col">
+                <div class="top">
+                    <p>Match overview</p>
+                    <section>
+                        <i class="far"></i>
+                        <span>#0</span>
+                        <i class="far"></i>
+                    </section>
+                    <!-- <section>
+                        <i class="far fa-hand-rock"></i>
+                        <span>0</span>
+                        <i class="far fa-hand-rock fa-flip-horizontal"></i>
+                    </section> -->
+                </div>
+                <div class="bottom">
+                    <p>AI's comments</p>
+                    <section>
+                        <span>#0</span>
+                        <p>Beat me!</p>
+                    </section>
+                    <!-- <section>
+                        <span>0</span>
+                        <p>Text text text text text</p>
+                    </section>
+                    <section>
+                        <span>0</span>
+                        <p>Text text text</p>
+                    </section> -->
+                </div>
+            </div>
+            <div class="right col border">
+                <img src="img/rock.jpg" alt="Ai's choice">
+                <button class="rulls">See the rules</button>
+            </div>
+        </div>
+    </div>
+    <div class="rulesBcg"></div>
+    <div class="rulesMenu">
+        <i class="fas fa-times"></i>
+        <h2>The rules are simple:</h2>
+        <p>Rock beats scissors,</p>
+        <p>Scissors beat paper,</p>
+        <p>Paper beats rock.</p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
